@@ -27,47 +27,34 @@
           <div>
             <h1>Add Users</h1>
             <hr>
-            <input type="text" placeholder=" Enter their Username" required>
+            <div id="messages"></div>
+            <select id="Group options">
+            </select>
             <br>
-            <input type="text" placeholder="Enter the user Email" required>
+            <input type="text" placeholder="Enter a group name" id="group name">
             <br>
-            <input type="text" placeholder="Enter the user Location" required>
+            <input type="text" placeholder="Enter user role" id="user_role">
             <br>
-            <input type="text" placeholder="Enter the user Phone number" required>
+            <input type="text" placeholder="Enter the user email" id="user_email">
             <br>
-            <br>
-            <select>
-                <option value="">Groups</option>
-                <option value="">Java Engineers</option>
-                <option value="">Python Ladies</option>
-                <option value="">Developers</option>
-              </select>
-            <br>
-            <button type="submit" class="signup">Submit</button>
+            <button type="submit" class="signup" >Submit</button>
             <br>
           </div>
         </form>
         <form class="container" id="CreateGroups">
+          <div id="messages"></div>
           <div>
             <h1>Create Groups</h1>
             <hr>
-            <input type="text" placeholder=" Enter a group name" required>
+            <select id="">
+            </select>
             <br>
-            <input type="text" placeholder="Enter your story description" required>
+            <input type="text" placeholder="Enter a group name" id="groupname">
+            <br>   
             <br>
-            <input type="text" placeholder=" Enter a Phone number" required>
-            <br>
-            <input type="text" placeholder="Enter your a Location" required>
-            <br>
-            <br>
-                <select>
-                  <option value="">Groups</option>
-                  <option value="">Java Engineers</option>
-                  <option value="">Python Ladies</option>
-                  <option value="">Developers</option>
-                </select>
+            <input type="text" placeholder="Enter a group role" id="grouprole">
                 <br>
-                  <button type="submit" class="signup">Submit</button>
+                  <button type="button" class="signup" onclick="CreateGroup()">Submit</button>
                 <br>
           </div>
         </form>
@@ -78,6 +65,9 @@
         <p>&copy; Epic Mail 2019</p>
       </div>
     </footer>
+    <script src="js/global.js"></script>
+    <script src="js/adduser.js"></script>
+    <script src="js/creategroup.js"></script>
   </body>
   </html>
   

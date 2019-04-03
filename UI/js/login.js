@@ -1,9 +1,10 @@
 function loginUser(){
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
+    
+    let email = document.getElementById('email').value;
+    let  password = document.getElementById('password').value;
     const data = {"email":email, "password":password};
 
-    var login_url=SERVER_URL+"/api/v2/auth/login";
+    let login_url=SERVER_URL+"/api/v2/auth/login";
     fetch(login_url, {
         method: 'POST',
         headers: {
@@ -26,13 +27,14 @@ function loginUser(){
                 }
             }
             else{
-                var mssg = document.getElementById('message');
-                mssg.style.display="block";
-                mssg.innerHTML = "Missing or wrong email format or password is less than five characters"
-                setInterval(function(){
-                    mssg.style.display="none"
-                    
-                },5000);
+                let mssg = document.getElementById('message');
+                // mssg.style.display="block";
+                // mssg.innerHTML = "Missing or wrong email format or password is less than five characters"
+                // setInterval(function(){
+                //     mssg.style.display="none"
+                    alert("Missing or wrong email format or password is less than five characters");
+
+                
             }
             
         })
