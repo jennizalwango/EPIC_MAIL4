@@ -24,44 +24,11 @@
                 <li><a href="compose.html">Compose</a></li>
                 <li><a href="users.html">Inbox</a></lii>
                 <li><a href="sent.html">Sent</a></li>
-                <li><a href="Drafts.html">Drafts</a></li>
+                <li><a href="sendmessge2group.html">Send message to a group</a></li>
             </ul>
             </div>
       </aside>
-    
-      <table>
-
-          <caption>Sent Messages</caption>
-          
-      <th>Sender</th>
-      <th>Title</th>
-      <th>Message</th>
-      <th>Date</th>
-      <th>Action</th>
-    </tr>
-    <tr>
-      <td>zawal@gmail.com</td>
-      <td>Hackthons</td>
-      <td>There will be an hackthon</td>
-      <td>23. thr. 2019</td>
-      <td><button  id ="message" class="thselect">Read</button>
-        <button onclick="mydeleteFunction()" class="thselect">Delete</button>
-      </td>
-    </tr>
-    <tr>
-        <td>jenny@gmail.com</td>
-        <td>Meeting</td>
-        <td>There will be a meeting</td>
-        <td>24. fri. 2019</td>
-        <td><button  id ="message2" class="thselect">Read</button>
-          <button onclick="mydeleteFunction()" class="thselect">Delete</button>
-        </td>
-      </tr>
-      
-        </table>
-
-
-  <!-- The Modal for read button to display message-->
+      <div id="sent_message"></div>
   <div id="DisplayMessage" class="modal">
 
       <!-- Modal content -->
@@ -71,9 +38,9 @@
         </div>
         <div class="modal-body">
           <form class="modal_elements">
-            <p>Sent To: jzalwa@gmail.com<p>
+            <p>Sent To: <span id="receiver_id"></span><p>
             <p>From: Me</p>
-            <textarea >There will be a meeting</textarea>
+            <textarea ><span id="current_message"></span></textarea>
             <div id="submit">
               <button class="thselect">Forward</button>
             </div>
@@ -95,5 +62,7 @@
       
   
           <script src="js/myModals.js"></script>
+          <script src="js/global.js"></script>
+          <script src="js/sent.js"></script>
 </body>
 </html>

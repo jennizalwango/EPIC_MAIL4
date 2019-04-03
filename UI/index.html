@@ -18,17 +18,18 @@
   <div id="login_form">
     <h3>Login</h3>
     <hr>
-    <input type="email" placeholder="Email"> <br><br>
-    <input type="password" placeholder="Password">
+    <input type="email" placeholder="Email" id="email"> <br><br>
+    <input type="password" placeholder="Password" id="password">
     <br><br>
     <div id="lower_login">
       <br>
-      <button><a href="users.html" id="loginbtn">Login</a></button>
+      <button onclick="loginUser(); return false;" >Login</button>
     <P>Dont have an account? <a href="signup.html">signup </a></P>
         <p><a href="#">Forgot your password</a></p>
     </div>
   </div>
 </form>
+<script src="js/global.js"></script>
 <script src="js/login.js"></script>
 </body>
 </html>

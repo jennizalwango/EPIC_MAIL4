@@ -23,11 +23,11 @@
                 <li><a href="compose.html">Compose</a></li>
                 <li><a href="users.html">Inbox</a></lii>
                 <li><a href="sent.html">Sent</a></li>
-                <li><a href="Drafts.html">Drafts</a></li>
+                <li><a href="sendmessge2group.html">Send message to a group</a></li>
             </ul>
             </div>
       </aside>
-      <table>
+      <!-- <table>
           <caption>Draft Messages</caption>  
       <th>Sender</th>
       <th>Title</th>
@@ -56,14 +56,14 @@
         </td>
       </tr>
       
-        </table>
+        </table> -->
 
 
   <!-- The Modal for displaying message -->
-  <div id="DisplayMessage" class="modal">
+  <!-- <div id="DisplayMessage" class="modal"> -->
 
       <!-- Modal content -->
-      <div class="modal-content">
+      <!-- <div class="modal-content">
         <div class="modal-header">
               <h3>Message<span class="closeBtn2">&times;</span></h3>
         </div>
@@ -80,7 +80,26 @@
         <div> 
         </div>
       </div>  
-    </div>
+    </div> -->
+    <table>
+      <caption>Send a Message</caption>
+      <tr>
+        <td>
+          <div class="compose_form">
+            <div id="messages"></div>
+            <form class="modal_elements">
+              <input type="text" name="title" placeholder="Enter Group name" id="Group name">
+              <input type="text" name="title" placeholder="Enter subject" id="subject">
+              <textarea cols="30" rows="10" placeholder="Enter Message" id="message"></textarea>
+              <div id="submit">
+                <button type="button" class="signup" id="Save">Save</button>
+                <button type="button" class="signup" id="Delete">Delete</button>
+              </div>
+            </form>
+          </div>
+        </td>
+      </tr>
+    </table>
         <footer>
             <div>
                 <p>&copy; Epic Mail 2019</p>
