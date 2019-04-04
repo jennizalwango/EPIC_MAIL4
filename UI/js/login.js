@@ -7,7 +7,7 @@ function loginUser(){
     let login_url=SERVER_URL+"/api/v2/auth/login";
     fetch(login_url, {
         method: 'POST',
-        mode:'cors',
+        mode:'no cors',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
