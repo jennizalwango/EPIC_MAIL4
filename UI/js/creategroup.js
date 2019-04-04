@@ -12,7 +12,6 @@ function CreateGroup(){
     let creategroup_url= SERVER_URL+"/api/v2/groups";
     fetch(creategroup_url,{
       method:'POST',
-      mode:'no-cors',
       headers: {
         'auth-token': token,
         'Accept': 'application/json',

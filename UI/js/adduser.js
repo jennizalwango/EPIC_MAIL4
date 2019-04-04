@@ -14,7 +14,6 @@ function AddUser(){
     let adduser_url= SERVER_URL+"/api/v2/groups/<group_id>/users";
     fetch(adduser_url,{
       method:'POST',
-      mode:'no-cors',
       headers: {
         'auth-token': token,
         'Accept': 'application/json',
