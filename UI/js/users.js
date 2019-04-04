@@ -35,6 +35,7 @@ fetch(getmessage_url,{
 
 
 // Delete message
+
 function mydeleteFunction(message_id){
 var confirm_delete = confirm("Are you sure you want to delete this message!");
 if(confirm_delete === true){
@@ -54,7 +55,6 @@ fetch(deletemessage_url, {
   .then(result => {
      location.reload()
      if(result.status === 200){
-      
         var msg = document.getElementById('mess');
         msg.style.display="block";
 
