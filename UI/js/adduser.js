@@ -3,7 +3,7 @@ token = localStorage.getItem('auth-token');
     window.location.href= './index.html'
   }
 function AddUser(){
-  
+
   let groupId = document.getElementById("groupId").value;
   let userRole = document.getElementById("userRole").value;
   let userId = document.getElementById("userId").value 
@@ -36,5 +36,8 @@ function AddUser(){
       } 
      
 })
+    .catch(function(err) {
+      console.log('Fetch Error :-S', err);
+    });
   }
 }

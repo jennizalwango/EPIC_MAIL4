@@ -37,6 +37,11 @@ function CreateGroup(){
       } 
          
 })
+
+
+    .catch(function(err) {
+  console.log('Fetch Error :-S', err);
+      });
   }}
 
 
@@ -76,5 +81,9 @@ function CreateGroup(){
          }
         
       })
+
+      .catch(function(err) {
+        console.log('Fetch Error :-S', err);
+      });
     }}
 
