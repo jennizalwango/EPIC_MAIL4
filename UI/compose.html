@@ -22,7 +22,7 @@
         <li><a href="compose.html">Compose</a></li>
         <li><a href="users.html">Inbox</a></lii>
         <li><a href="sent.html">Sent</a></li>
-        <li><a href="Drafts.html">Drafts</a></li>
+        <li><a href="sendmessge2group.html">Send message to a group</a></li>
       </ul>
     </div>
   </aside>
@@ -31,14 +31,14 @@
     <tr>
       <td>
         <div class="compose_form">
+          <div id="messages"></div>
           <form class="modal_elements">
-            <input type="text" name="title" placeholder="Enter receiver's email" required>
-            <input type="text" name="title" placeholder="Enter subject" required>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Enter Message"></textarea>
+            <input type="text" name="title" placeholder="Enter receiver's email" id="receiver_email">
+            <input type="text" name="title" placeholder="Enter subject" id="subject">
+            <textarea cols="30" rows="10" placeholder="Enter Message" id="message"></textarea>
             <div id="submit">
-              <button type="submit" class="signup">Save</button>
-              <button type="submit" class="signup">Save as drafts</button>
-              <button type="submit" class="signup">Delete</button>
+              <button type="button" class="signup" id="Save">Save</button>
+              <button type="button" class="signup" id="Delete">Delete</button>
             </div>
           </form>
         </div>
@@ -50,7 +50,8 @@
       <p>&copy; Epic Mail 2019</p>
     </div>
   </footer>
-  <script src="js/myModals.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/compose.js"></script>
 </body>
 
 </html>

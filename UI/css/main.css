@@ -136,6 +136,13 @@ padding: 12px 20px;
 margin-top: 15px;
 display: inline-block;
 }
+select{
+  width: 80%;
+  padding: 12px 20px;
+  margin-top: 15px;
+  display: inline-block;
+}
+
 .red{
 background-color: #635D9C;
 width:100%;

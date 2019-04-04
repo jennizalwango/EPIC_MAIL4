@@ -23,41 +23,14 @@
                 <li><a href="compose.html">Compose</a></li>
                 <li><a href="users.html">Inbox</a></lii>
                 <li><a href="sent.html">Sent</a></li>
-                <li><a href="Drafts.html">Drafts</a></li>
+                <li><a href="sendmessge2group.html">Send message to a group</a></li>
             </ul>
             </div>
       </aside>
     
-      <table>
+  <div id="inbox_message">
 
-          <caption>Inbox Messages</caption>
-          
-      <th>Receiver</th>
-      <th>Title</th>
-      <th>Message</th>
-      <th>Date</th>
-      <th>Action</th>
-    </tr>
-    <tr>
-      <td>zawal@gmail.com</td>
-      <td>Hackthons</td>
-      <td>There will be an hackthon</td>
-      <td>23. thr. 2019</td>
-      <td><button  id ="message" class="thselect">Read</button>
-        <button onclick="mydeleteFunction()" class="thselect">Delete</button>
-      </td>
-    </tr>
-    <tr>
-        <td>jenny@gmail.com</td>
-        <td>Meeting</td>
-        <td>There will be a meeting</td>
-        <td>24. fri. 2019</td>
-        <td><button  id ="message2" class="thselect">Read</button>
-          <button onclick="mydeleteFunction()" class="thselect">Delete</button>
-        </td>
-      </tr>
-      
-        </table>
+  </div>
 
 
   <!-- The Modal for message display-->
@@ -70,15 +43,15 @@
         </div>
         <div class="modal-body">
           <form class="modal_elements">
-            <p>Received From: jzalwa@gmail.com<p>
+            <p>Received From: <span id="sender_email"></span><p>
             <p>To: Me</p>
-            <textarea >There will be a meeting</textarea>
+            <textarea ><span id="Received_Message"></span></textarea>
             <div id="submit">
-              <button class="thselect">Send</button>
+              <button class="thselect" >Send</button>
             </div>
           </form>
         </div>
-        <div> 
+        <div id="mess"> 
         </div>
       </div>
     </div>
@@ -87,7 +60,8 @@
                 <p>&copy; Epic Mail 2019</p>
             </div>
           </footer>
-  
           <script src="js/myModals.js"></script>
+          <script src="js/global.js"></script>
+          <script src="js/users.js"></script>
 </body>
 </html>
