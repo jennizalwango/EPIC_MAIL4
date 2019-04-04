@@ -1,7 +1,11 @@
+token = localStorage.getItem('auth-token');
+  if (token == null){
+    window.location.href= './index.html'
+  }
 document.getElementById("Save").addEventListener('click', createmessage);
   function createmessage(){
 
-  token = localStorage.getItem('auth-token');
+
 
 
     let receiver_email = document.getElementById('receiver_email').value;

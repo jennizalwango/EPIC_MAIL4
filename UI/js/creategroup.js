@@ -1,8 +1,12 @@
 
-function CreateGroup(){
+
 
   token = localStorage.getItem('auth-token');
+  if (token == null){
+    window.location.href= './index.html'
+  }
 
+function CreateGroup(){
   let groupname = document.getElementById("groupname").value;
   let grouprole = document.getElementById("grouprole").value;
 

@@ -1,5 +1,8 @@
 
 token = localStorage.getItem('auth-token');
+if (token == null){
+  window.location.href= './index.html'
+}
 let getmessage_url= SERVER_URL+"/api/v2/messages/sent";
 fetch(getmessage_url,{
   method:'GET',
@@ -16,7 +19,7 @@ fetch(getmessage_url,{
 .then(result => {
   if(result.status === 200){
    
-    data = "<table><caption>Inbox Messages</caption><th>Receiver</th><th>Subject</th><th>Message</th><th>Date</th><th>Action</th>";
+    data = "<table><caption>Sent Messages</caption><th>Receiver</th><th>Subject</th><th>Message</th><th>Date</th><th>Action</th>";
     if(result.data == "No sent messages found"){
         data += "<tr><td colspan='5'>No sent messages found</td></tr></table>";
     }else{
