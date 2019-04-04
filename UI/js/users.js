@@ -3,6 +3,7 @@ token = localStorage.getItem('auth-token');
 let getmessage_url= SERVER_URL+"/api/v2/messages";
 fetch(getmessage_url,{
   method:'GET',
+  mode:'cors',
   headers: {
     'auth_token': token,
     'Accept': 'application/json',
@@ -43,6 +44,7 @@ token = localStorage.getItem('auth-token')
 let deletemessage_url = SERVER_URL+`/api/v2/messages/${message_id}`
 fetch(deletemessage_url, {
   method: 'DELETE',
+  mode:'cors',
   headers: {
      'Accept': 'application/json',
      'Content-type': 'application/json',
