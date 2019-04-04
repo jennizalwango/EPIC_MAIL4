@@ -49,5 +49,9 @@ document.getElementById("Save").addEventListener('click', createmessage);
             }
             
         })
+
+        .catch(function(err) {
+            console.log('Fetch Error :-S', err);
+          });
           
   }

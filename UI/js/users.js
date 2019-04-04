@@ -74,6 +74,10 @@ fetch(deletemessage_url, {
      }
     
   })
+
+  .catch(function(err) {
+    console.log('Fetch Error :-S', err);
+  });
 }}
 
 
