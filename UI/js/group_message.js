@@ -2,6 +2,7 @@ token = localStorage.getItem('auth-token');
 let getmessage_url= SERVER_URL+"/api/v2/groupnames";
 fetch(getmessage_url,{
   method:'GET',
+  mode:'cors',
   headers: {
     'auth_token': token,
     'Accept': 'application/json',
@@ -50,6 +51,7 @@ document.getElementById("Save").addEventListener('click', createmessage);
     let createmssg_url=SERVER_URL+"/api/v2/groups/"+id+"/messages";
     fetch(createmssg_url, {
         method: 'POST',
+        mode:'cors',
         headers: {
             'auth-token': token,
             'Accept': 'application/json',

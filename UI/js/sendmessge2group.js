@@ -13,6 +13,7 @@ document.getElementById("Save").addEventListener('click', SendMessagetogroup);
     let sendmssgtogroup_url=SERVER_URL+"/api/v2/groups/<group_id>/users";
     fetch(sendmssgtogroup_url, {
         method: 'POST',
+        mode:'cors',
         headers: {
             'auth-token': token,
             'Accept': 'application/json',
