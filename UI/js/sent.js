@@ -3,6 +3,7 @@ token = localStorage.getItem('auth-token');
 let getmessage_url= SERVER_URL+"/api/v2/messages/sent";
 fetch(getmessage_url,{
   method:'GET',
+  mode:'cors',
   headers: {
     'auth_token': token,
     'Accept': 'application/json',

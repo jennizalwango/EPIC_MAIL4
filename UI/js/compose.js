@@ -13,6 +13,7 @@ document.getElementById("Save").addEventListener('click', createmessage);
     let createmssg_url=SERVER_URL+"/api/v2/messages";
     fetch(createmssg_url, {
         method: 'POST',
+        mode:'cors',
         headers: {
             'auth-token': token,
             'Accept': 'application/json',
