@@ -14,7 +14,6 @@ function CreateUser(){
     let createaccount_url= SERVER_URL+"/api/v2/auth/signup";
     fetch(createaccount_url,{
       method:'POST',
-      mode:'no-cors',
       headers: {
         'Accept': 'application/json',
         'content-Type':'application/json'
