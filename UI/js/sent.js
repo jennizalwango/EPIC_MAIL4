@@ -33,5 +33,3 @@ fetch(getmessage_url,{
   } 
         
 })
-
-

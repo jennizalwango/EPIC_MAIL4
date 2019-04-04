@@ -27,60 +27,7 @@
             </ul>
             </div>
       </aside>
-      <!-- <table>
-          <caption>Draft Messages</caption>  
-      <th>Sender</th>
-      <th>Title</th>
-      <th>Message</th>
-      <th>Date</th>
-      <th>Action</th>
-    </tr>
-    <tr>
-      <td>zawal@gmail.com</td>
-      <td>Hackthons</td>
-      <td>There will be an hackthon</td>
-      <td>23. thr. 2019</td>
-      <td><button   class="thselect">Edit</button>
-        <button  id ="message" class="thselect">Read</button>
-        <button onclick="mydeleteFunction()" class="thselect">Delete</button>
-      </td>
-    </tr>
-    <tr>
-        <td>jenny@gmail.com</td>
-        <td>Meeting</td>
-        <td>There will be a meeting</td>
-        <td>24. fri. 2019</td>
-        <td><button class="thselect">Edit</button>
-          <button  id ="message2" class="thselect">Read</button>
-          <button onclick="mydeleteFunction()" class="thselect">Delete</button>
-        </td>
-      </tr>
-      
-        </table> -->
 
-
-  <!-- The Modal for displaying message -->
-  <!-- <div id="DisplayMessage" class="modal"> -->
-
-      <!-- Modal content -->
-      <!-- <div class="modal-content">
-        <div class="modal-header">
-              <h3>Message<span class="closeBtn2">&times;</span></h3>
-        </div>
-        <div class="modal-body">
-          <form class="modal_elements">
-            <p>Sent To: jzalwa@gmail.com<p>
-            <p>From: Me</p>
-            <textarea >There will be a meeting</textarea>
-            <div id="submit">
-              <button class="thselect">Send</button>
-            </div>          
-          </form> 
-        </div>
-        <div> 
-        </div>
-      </div>  
-    </div> -->
     <table>
       <caption>Send a Message</caption>
       <tr>
@@ -88,7 +35,9 @@
           <div class="compose_form">
             <div id="messages"></div>
             <form class="modal_elements">
-              <input type="text" name="title" placeholder="Enter Group name" id="Group name">
+              <select id="Group name">
+                
+              </select>
               <input type="text" name="title" placeholder="Enter subject" id="subject">
               <textarea cols="30" rows="10" placeholder="Enter Message" id="message"></textarea>
               <div id="submit">
@@ -107,5 +56,7 @@
           </footer>
 
           <script src="js/myModals.js"></script>
+          <script src="js/global.js"></script>
+          <script src="js/group_message.js"></script>
 </body>
 </html>
