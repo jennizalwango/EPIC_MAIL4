@@ -1,43 +1,44 @@
 //Modal for the message 1
 // Get the modal
 
-function readMessage(id, message, subject){
-var modal = document.getElementById('DisplayMessage');
+function readMessage(id){
+   var modal = document.getElementById('DisplayMessage');
 
-// Get the button that opens the modal
-var modalBtn  = document.getElementById(id);
+   // Get the button that opens the modal
+   var modalBtn  = document.getElementById(id);
 
-// Get the <span> element that closes the modal
-var closeBtn = document.getElementsByClassName("closeBtn2")[0];
+   // Get the <span> element that closes the modal
+   var closeBtn = document.getElementsByClassName("closeBtn2")[0];
 
-//listen for click
-modalBtn.onclic('click', openModal);
+   //listen for click
+   modalBtn.onclic('click', openModal);
 
-//listen for close click
-closeBtn.addEventListener('click', closeModal);
+   //listen for close click
+   closeBtn.addEventListener('click', closeModal);
 
-//listen for outside click
-window.addEventListener('click', clickOutside);
+   //listen for outside click
+   window.addEventListener('click', clickOutside);
 
-// When the user clicks the button, open the modal
-function openModal(){
-	modal.style.display = "block";
-} 
+   // When the user clicks the button, open the modal
+   function openModal(){
+      modal.style.display = "block";
+   } 
 
-//function to close modal
-function closeModal(){
+   //function to close modal
+   function closeModal(){
 
-	modal.style.display = 'none';
-}
-
-//function to close modal if outside click
-
-function clickOutside(e){
-   if(e.target == modal){
-   	modal.style.display = 'none';
+      modal.style.display = 'none';
    }
-	
-}}
+
+   //function to close modal if outside click
+
+   function clickOutside(e){
+      if(e.target == modal){
+         modal.style.display = 'none';
+      }
+      
+   }
+}
 
 
 
