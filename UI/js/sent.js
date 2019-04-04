@@ -1,9 +1,11 @@
 
 token = localStorage.getItem('auth-token');
+if (token == null){
+  window.location.href= './index.html'
+}
 let getmessage_url= SERVER_URL+"/api/v2/messages/sent";
 fetch(getmessage_url,{
   method:'GET',
-  mode:'no-cors',
   headers: {
     'auth_token': token,
     'Accept': 'application/json',
@@ -23,8 +25,8 @@ fetch(getmessage_url,{
     }else{
       for(var i=0; i<result.data.length;i++){
 
-        data += "<tr><td>"+result.data[i]['receiver_mail']+"</td><td>"+result.data[i]['subject']+"</td><td>"+result.data[i]['message']+"</td><td>"+result.data[i]['createdOn']+"</td><td><button id ='message'>Read</button>"+
-        "<button onclick='mydeleteFunction("+result.data[i]['id']+")'>Delete</button> </td></tr>";
+        data += "<tr><td>"+result.data[i]['receiver_mail']+"</td><td>"+result.data[i]['subject']+"</td><td>"+result.data[i]['message']+"</td><td>"+result.data[i]['createdOn']+"</td><td><button id ='"+result.data[i]['id']+
+        "' onclick=\"readSentMessage('"+result.data[i]['id']+"','"+result.data[i]['message']+"','"+result.data[i]['subject']+"','"+result.data[i]['receiver_mail']+"')\" >Read</button>";
       }
     }
     document.getElementById('sent_message').innerHTML = data+"</table>"

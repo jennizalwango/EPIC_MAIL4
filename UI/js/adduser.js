@@ -1,8 +1,9 @@
-
+token = localStorage.getItem('auth-token');
+  if (token == null){
+    window.location.href= './index.html'
+  }
 function AddUser(){
-
-  token = localStorage.getItem('auth-token');
-
+  
   let groupId = document.getElementById("groupId").value;
   let userRole = document.getElementById("userRole").value;
   let userId = document.getElementById("userId").value 
@@ -14,7 +15,6 @@ function AddUser(){
     let adduser_url= SERVER_URL+"/api/v2/groups/<group_id>/users";
     fetch(adduser_url,{
       method:'POST',
-      mode:'no-cors',
       headers: {
         'auth-token': token,
         'Accept': 'application/json',

@@ -1,8 +1,12 @@
 
-function CreateGroup(){
+
 
   token = localStorage.getItem('auth-token');
+  if (token == null){
+    window.location.href= './index.html'
+  }
 
+function CreateGroup(){
   let groupname = document.getElementById("groupname").value;
   let grouprole = document.getElementById("grouprole").value;
 
@@ -12,7 +16,6 @@ function CreateGroup(){
     let creategroup_url= SERVER_URL+"/api/v2/groups";
     fetch(creategroup_url,{
       method:'POST',
-      mode:'no-cors',
       headers: {
         'auth-token': token,
         'Accept': 'application/json',

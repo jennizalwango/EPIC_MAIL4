@@ -1,7 +1,11 @@
+token = localStorage.getItem('auth-token');
+  if (token == null){
+    window.location.href= './index.html'
+  }
 document.getElementById("Save").addEventListener('click', createmessage);
   function createmessage(){
 
-  token = localStorage.getItem('auth-token');
+
 
 
     let receiver_email = document.getElementById('receiver_email').value;
@@ -13,7 +17,6 @@ document.getElementById("Save").addEventListener('click', createmessage);
     let createmssg_url=SERVER_URL+"/api/v2/messages";
     fetch(createmssg_url, {
         method: 'POST',
-        mode:'no-cors',
         headers: {
             'auth-token': token,
             'Accept': 'application/json',
