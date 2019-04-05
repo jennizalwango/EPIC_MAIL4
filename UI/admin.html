@@ -1,0 +1,151 @@
+<DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>ABOUT</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+      <script src="js/main.js"></script>
+    </head>
+    <body>
+      <nav>
+        <ul>
+          <li><a href="users.html" class="left">EPIC MAIL</a></li>
+          <li><a href="#" class="right">(<span style="color: lightblue;"><script>document.writeln(localStorage.getItem('profile'));</script></span>)</a></li>
+          <li><a href='#' class="right" onclick="logOut()">Logout</a></li>
+          <li><a href="users.html" class="right">Users</a></li>
+          <li><a href="admin.html" class="right">Admin</a></li>
+        </ul>
+      </nav>
+      <div class="maincontainer">
+        <div id="admin">
+          <div class="button1">
+            <button onclick="AddUsers()">Add Users</button>
+            <button onclick="CreateGroups()">Create Groups</button>
+            <button onclick="DeleteGroups()">Delete Group</button>
+            <button onclick="DeleteUserFromGroups()">Delete User From Group</button>
+            <button onclick="EditGroup()">Edit Group Name</button>
+          </div>
+          <div>
+          <form class="container" id="AddUsers">
+           
+              <h1>Add Users</h1>
+              <hr>
+              <div id="messages"></div>
+              <!-- <select id="Group options">
+              </select> -->
+              <br>
+              <div id="add_user_form">
+              <select id="groupId">
+  
+              </select>
+              <br>
+              <input type="text" placeholder="Enter userRole" id="userRole">
+              <br>
+              <select id="userId">
+              </select>
+              <br>
+              <button type="button" class="signup" onclick="AddUser()" >Submit</button>
+              <br>
+            </div>
+          </form>
+        </div>
+          <form class="container" id="CreateGroups">
+            <div id="messages"></div>
+            <div>
+              <h1>Create Groups</h1>
+              <hr>
+              <!-- <select id="">
+              </select> -->
+              <br>
+              <input type="text" placeholder="Enter a group name" id="groupname">
+              <br>   
+              <br>
+              <input type="text" placeholder="Enter a group role" id="grouprole">
+                  <br>
+                    <button type="button" class="signup" onclick="CreateGroup()">Submit</button>
+                  <br>
+            </div>
+          </form>
+          
+            <form class="container" id="DeleteUserFromGroups">
+             
+                <h1>Delete User From A Group</h1>
+                <hr>
+                <div id="messages"></div>
+                <!-- <select id="Group options">
+                </select> -->
+                <br>
+                <div id="delete_usergroup_form">
+                <select id="DeleteUserFromGroupID">
+    
+                </select>
+                <br>
+                <select id="DeleteUserId">
+                </select>
+                <br>
+                <button type="button" class="signup" onclick="DeleteUserFromGroup_1()" >Submit</button>
+                <br>
+              </div>
+            </form>
+  
+            <!-- Edit Group name -->
+            <form class="container" id="ChangeGroupName">
+           
+              <h1>Change Group Name</h1>
+              <hr>
+              <div id="messages"></div>
+              <select id="Group options">
+              </select>
+              <br>
+              <div id="add_user_form">
+              <select id="getgroupId">
+  
+              </select>
+              <br>
+              <input type="text" placeholder="Enter new group name" id="newgroupname">
+              <br>
+              <button type="button" class="signup" onclick="RenameGroup()" >Submit</button>
+              <br>
+            </div>
+          </form>
+        
+  
+          <!-- Delete Group -->
+          <form class="container" id="DeleteGroups">
+           
+            <h1>Delete Group</h1>
+            <hr>
+            <div id="messages"></div>
+            <select id="Group options">
+            </select>
+            <br>
+            <div id="delete_user_form">
+            <select id="DeleteGroupId">
+  
+            </select>
+            <br>
+            <button type="button" class="signup" onclick="DeleteGroup()" >Submit</button>
+            <br>
+          </div>
+        </form>
+          
+        </div>
+      </div>
+      <footer>
+        <div>
+          <p>&copy; Epic Mail 2019</p>
+        </div>
+      </footer>
+      <script src="js/global.js"></script>
+      <script src="js/adduser.js"></script>
+      <script src="js/creategroup.js"></script>
+      <script src="js/delete_group.js"></script>
+      <script src="js/DeleteUserFromGroup.js"></script>
+      <script src="js/editGroupName.js"></script>
+      <script src="js/logout.js"></script>
+      
+    </body>
+    </html>
+    
