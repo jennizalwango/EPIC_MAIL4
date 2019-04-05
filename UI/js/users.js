@@ -79,8 +79,3 @@ fetch(deletemessage_url, {
     console.log('Fetch Error :-S', err);
   });
 }}
-
-
-// result.data[i]['id']
-// 
-// result.data[i]['subject']
