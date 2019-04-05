@@ -17,7 +17,7 @@ fetch(getmessage_url,{
 .then((res) => res.json())
 .then(result => {
   if(result.status === 200){
-    data = "<table><caption>Inbox Messages</caption><th>Sender</th><th>Subject</th><th>Message</th><th>Date</th><th>Action</th>";
+    data = "<table><caption>Inbox Messages</caption><th>Receiver</th><th>Subject</th><th>Message</th><th>Date</th><th>Action</th>";
     if(result.data == "No receieved messages found"){
         data += "<tr><td colspan='5'>No receieved messages found</td></tr></table>";
     }else{
