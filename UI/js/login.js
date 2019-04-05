@@ -17,12 +17,15 @@ function loginUser(){
         .then((res) => res.json())
         .then(result => {
             if(result.status === 200){
+                var profile = "User: "+result.data[0]['user']['firstname']+' '+result.data[0]['user']['lastname'];
                 if(result.data[0]['user']['isadmin'] == "false"){
                     localStorage.setItem("auth-token",result.data[0]['token']);
+                    localStorage.setItem("profile",profile);  
                     window.location.href = 'users.html';
                 }
                 else{
                     localStorage.setItem("auth-token",result.data[0]['token']);
+                    localStorage.setItem("profile",profile);
                     window.location.href = 'admin.html';
                 }
             }

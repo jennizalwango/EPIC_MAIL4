@@ -1,8 +1,3 @@
-# EPIC_MAIL4
-This is an application that is developed to help people exchange information over the internet
-[![Build Status](https://travis-ci.org/jennizalwango/EPIC_MAIL.svg?branch=challenge3)](https://travis-ci.org/jennizalwango/EPIC_MAIL)  [![Coverage Status](https://coveralls.io/repos/github/jennizalwango/EPIC_MAIL/badge.svg?branch=challenge3)](https://coveralls.io/github/jennizalwango/EPIC_MAIL?branch=challenge3) [![Maintainability](https://api.codeclimate.com/v1/badges/7375c492ed31fcf0768e/maintainability)](https://codeclimate.com/github/jennizalwango/EPIC_MAIL/maintainability)
-
-
 ## project name 
   Epic Mail
 
@@ -18,7 +13,7 @@ This is an application that is developed to help people exchange information ove
 
 ## Prerequisties
 Inorder  to run this application you need the following;
-you need to have [python3](https://www.python.org/downloads/)  installed on your machine.
+you need to have [](https://www.python.org/downloads/)  installed on your machine.
 
 You need to have [flask](http://flask.pocoo.org/docs/1.0/installation/) installed on your 
 machine.
@@ -28,7 +23,7 @@ Pylint allows one to write code following a specific style guide.
  to install it run
 
 ```
-pip install pylint
+pip install ESlint
 ```
 
 ## Installing 
@@ -36,7 +31,7 @@ pip install pylint
 > - To clone this appplication;
 
  ```
-  $ git clone : https://github.com/jennizalwango/EPIC_MAIL.git
+  $ git clone : https://github.com/jennizalwango/EPIC_MAIL4.git
 ```
 
 
@@ -50,57 +45,52 @@ pip install pylint
  ```
  $ code .
  ``` 
-  
-> - You have to install a virutualenvirnoment, 
-```
-  $ pip3 install virtualenv
-```
 
-> - Create the virtual envirnoment
-```
-  $ virtualenv myenv
-```
-
-> - Activate your virtualenv to start working.
- ```
- $ source myenv/bin/activate
- ```
-
- Good then install the app dependencies,these are found in the `requirements.txt`
- ```
- $ pip install -r requiremnets.txt
- ```
-
-This will help you get all the app dependencies used in the application development
-
-Execute the application by running a given command 
+Execute the application by opening the folder the browser
+In yourvscode 
  
  ```
- $ python run.py
+ $ Go to file
  ```
 
-After running that command the server will start running http://127.0.0.1.5000/ which is the default URL 
-
-### How to run the tests:
-  ``` 
-  $ pytest -v  or
-    
-  $ python -m unittest 
+  ```
+ $ Select the file you want to open
+ ```
 
   ```
+ $ Right click
+ ```
 
-## Functionality
--Create an account and sign in to the system
+  ```
+ $ Open containg folder and select the broswer on your machine
+ ```
 
--Get all received emails.
+ To test out the application functionality 
+  ```
+ $  https://jennizalwango.github.io/EPIC_MAIL4/
+ ```
 
--Get all the unread emails
+## Functionality of the application
+- Create an account and sign in to the system
 
--Get all emails sent by a the other user
+- Get all received emails.
 
--Get a specific user’s email
+- View all emails sent by a the other user
 
--Send email to individuals.
+- Read a specific user’s email
 
--Delete an email in a user’s inbox
+- Send email to individuals.
 
+- Delete an email in a user’s inbox
+
+- Create a group
+
+- Add a user to a group
+
+- Send a message to a group
+
+- view all sent messages
+
+- Veiw received messages
+
+- 

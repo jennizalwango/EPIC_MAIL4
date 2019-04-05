@@ -18,7 +18,6 @@ fetch(getmessage_url,{
 .then((res) => res.json())
 .then(result => {
   if(result.status === 200){
-   alert(JSON.stringify(result));
     if(result.data == 'No group found'){
         document.getElementById('compose_form').innerHTML = '<p>There are no groups to send a message to. Please create one</p>';
     }

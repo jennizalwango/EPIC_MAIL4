@@ -4,7 +4,7 @@ function CreateUser(){
   let lastname = document.getElementById("lastname").value;
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
-  let isAdmin = "false";
+  let isAdmin = "true";
 
 
   if (firstname !="" && lastname !="" && email !="" && password !=""){
