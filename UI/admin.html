@@ -23,24 +23,30 @@
           <button onclick="AddUsers()">Add Users</button>
           <button onclick="CreateGroups()">Create Groups</button>
         </div>
+        <div>
         <form class="container" id="AddUsers">
-          <div>
+         
             <h1>Add Users</h1>
             <hr>
             <div id="messages"></div>
             <!-- <select id="Group options">
             </select> -->
             <br>
-            <input type="text" placeholder="Enter a groupId" id="groupId">
+            <div id="add_user_form">
+            <select id="groupId">
+
+            </select>
             <br>
             <input type="text" placeholder="Enter userRole" id="userRole">
             <br>
-            <input type="text" placeholder="Enter the userId" id="userId">
+            <select id="userId">
+            </select>
             <br>
             <button type="button" class="signup" onclick="AddUser()" >Submit</button>
             <br>
           </div>
         </form>
+      </div>
         <form class="container" id="CreateGroups">
           <div id="messages"></div>
           <div>
