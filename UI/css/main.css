@@ -171,10 +171,14 @@ margin: 4px 2px;
 padding: 10px;
 
 }
+#admin{
+  text-align: center
+}
 .button1 > button{
 border-radius: 18px;
-display:block;
+display:inline;
 margin:0 auto;
+
 }
 .signup{
   border-radius: 18px;
