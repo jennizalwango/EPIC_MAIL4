@@ -25,7 +25,7 @@ fetch(getmessage_url,{
     else{
         var data ='';
         for(var i = 0 ; i<result.data.length; i++){
-            data += "<option value='"+result.data[i]['group_id']+"'>"+result.data[i]['groupname']+"</option>"
+            data += "<option value='"+result.data[i]['id']+"'>"+result.data[i]['name']+"</option>"
         }
         document.getElementById('Group name').innerHTML = data;
     }
