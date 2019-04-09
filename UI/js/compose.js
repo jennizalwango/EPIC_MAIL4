@@ -1,6 +1,6 @@
 token = localStorage.getItem('auth-token');
   if (token == null){
-    window.location.href= './index.html'
+    window.location.href= './login.html'
   }
 document.getElementById("Save").addEventListener('click', createmessage);
   function createmessage(){

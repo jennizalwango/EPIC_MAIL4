@@ -28,7 +28,7 @@ function CreateUser(){
         document.getElementById("messages").style.display ="block";
         // document.getElementById("messages").innerHTML = data["User created successfully"]
         alert("User created successfully");
-        window.location.href = './index.html';
+        window.location.href = './login.html';
       }
       else{
         alert(JSON.stringify(result));

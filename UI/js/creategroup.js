@@ -3,7 +3,7 @@
 
   token = localStorage.getItem('auth-token');
   if (token == null){
-    window.location.href= './index.html'
+    window.location.href= './login.html'
   }
 
 function CreateGroup(){
