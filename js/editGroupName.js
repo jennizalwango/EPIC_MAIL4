@@ -69,11 +69,27 @@ function RenameGroup(){
     .then(result => {
       
        if(result.status === 200){
-       alert("Group renamed successfully")
-       window.location.href = 'admin.html';
+        document.getElementById("messages").style.display ="block";
+        document.getElementById("ChangeGroupName").reset();
+        var mssg = document.getElementById('success-message');
+        mssg.style.display="block";
+        mssg.innerHTML = "Group renamed successully";
+        setInterval(function(){
+            mssg.style.display="none"
+            
+},5000);
           
        }
        else{
+        document.getElementById("messages").style.display ="block";
+        document.getElementById("ChangeGroupName").reset();
+        var mssg = document.getElementById('error-message');
+        mssg.style.display="block";
+        mssg.innerHTML = ""+JSON.stringify(result);
+        setInterval(function(){
+            mssg.style.display="none"
+            
+},5000);
           alert(JSON.stringify(result))
        }
       

@@ -24,17 +24,28 @@ function CreateUser(){
     }) 
     .then((res) => res.json())
     .then(result => {
-      if(result.status === 201){
-        document.getElementById("messages").style.display ="block";
-        // document.getElementById("messages").innerHTML = data["User created successfully"]
-        alert("User created successfully");
-        window.location.href = './login.html';
+      if(result.status === 201){    
+        document.getElementById("formId").reset();
+        var mssg = document.getElementById('success-message');
+        mssg.style.display="block";
+        mssg.innerHTML = "You have successfully signed up";
+        setInterval(function(){
+            mssg.style.display="none"
+            
+        },5000);
       }
       else{
-        alert(JSON.stringify(result));
-      } 
+         
+          var mssg = document.getElementById('error-message');
+          mssg.style.display="block";
+          mssg.innerHTML = ""+JSON.stringify(result);
+          setInterval(function(){
+              mssg.style.display="none" 
+          },5000);
+       
+      }} 
       
      
     
-})
+)
   }}

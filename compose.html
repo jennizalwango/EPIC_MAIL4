@@ -17,6 +17,8 @@
       <li><a href="users.html" class="right">Users</a></li>
     </ul>
   </nav>
+  <div id ="error-message" style ="background-color: red; color:white;width:100%;"></div>
+  <div id ="success-message" style ="background-color: lightgreen; color:white;width:100%;"></div>
   <aside class="sidebar">
     <div>
       <ul class="ul">
@@ -27,19 +29,20 @@
       </ul>
     </div>
   </aside>
+
   <table>
     <caption>Send a Message</caption>
     <tr>
       <td>
         <div class="compose_form">
-          <div id="messages"></div>
-          <form class="modal_elements">
+     
+          <form class="modal_elements" id="theformId">
             <input type="text" name="title" placeholder="Enter receiver's email" id="receiver_email">
             <input type="text" name="title" placeholder="Enter subject" id="subject">
             <textarea cols="30" rows="10" placeholder="Enter Message" id="message"></textarea>
             <div id="submit">
               <button type="button" class="signup" id="Save">Save</button>
-              <button type="button" class="signup" id="Delete">Delete</button>
+              <!-- <button type="button" class="signup" id="Delete">Delete</button> -->
             </div>
           </form>
         </div>

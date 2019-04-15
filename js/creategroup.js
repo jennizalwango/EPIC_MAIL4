@@ -29,11 +29,26 @@ function CreateGroup(){
     .then(result => {
       if(result.status === 201){
         document.getElementById("messages").style.display ="block";
-        alert("Group created successfully");
-        window.location.href = './admin.html';
+        document.getElementById("CreateGroups").reset();
+        var mssg = document.getElementById('success-message');
+        mssg.style.display="block";
+        mssg.innerHTML = "Group has been created successfully";
+        setInterval(function(){
+            mssg.style.display="none"
+            
+},5000);
+       
       }
       else{
-        alert(JSON.stringify(result));
+        document.getElementById("messages").style.display ="block";
+        document.getElementById("CreateGroups").reset();
+        var mssg = document.getElementById('error-message');
+        mssg.style.display="block";
+        mssg.innerHTML = ""+JSON.stringify(result);
+        setInterval(function(){
+            mssg.style.display="none"     
+},5000);
+
       } 
          
 })

@@ -107,11 +107,26 @@ function AddUser(){
     .then(result => {
       if(result.status === 201){
         document.getElementById("messages").style.display ="block";
-        alert("User added to a group  successfully");
-        window.location.href = './admin.html';
+        document.getElementById("AddUsers").reset();
+        var mssg = document.getElementById('success-message');
+        mssg.style.display="block";
+        mssg.innerHTML = "User added to a group  successfully";
+        setInterval(function(){
+            mssg.style.display="none"
+            
+},5000);
       }
       else{
-        alert(JSON.stringify(result));
+        document.getElementById("messages").style.display ="block";
+        document.getElementById("AddUsers").reset();
+        var mssg = document.getElementById('error-message');
+        mssg.style.display="block";
+        mssg.innerHTML = ""+JSON.stringify(result);
+        setInterval(function(){
+            mssg.style.display="none"
+            
+},5000);
+    
       } 
      
 })
