@@ -1,6 +1,6 @@
 token = localStorage.getItem('auth-token');
   if (token == null){
-    window.location.href= './index.html'
+    window.location.href= './login.html'
   }
 document.getElementById("Save").addEventListener('click', createmessage);
   function createmessage(){
@@ -27,24 +27,28 @@ document.getElementById("Save").addEventListener('click', createmessage);
     })
         .then((res) => res.json())
         .then(result => {
-            console.log(result, '---result');
+            // console.log(result, '---result');
             if(result.status === 200){
                 if(result.data[0]['status'] == "sent"){
-                    document.getElementById("Save").style.display ="block";
-                    alert("Message created successfully");
-                    window.location.href = './users.html';
+                    document.getElementById("theformId").reset();
+                    var mssg = document.getElementById('success-message');
+                    mssg.style.display="block";
+                    mssg.innerHTML = "You have successfully sent a message";
+                    setInterval(function(){
+                        mssg.style.display="none"
+                        
+        },5000);
                 }
                 else{
                     alert(result);
                 }
             }
             else{
-                let mssg = document.getElementById('messages');
+                var mssg = document.getElementById('error-message');
                 mssg.style.display="block";
-                mssg.innerHTML = "Missing feilds "
+                mssg.innerHTML = ""+JSON.stringify(result);
                 setInterval(function(){
                     mssg.style.display="none"
-                    
                 },5000);
             }
             

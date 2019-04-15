@@ -12,10 +12,10 @@
       <nav>
         <ul>
           <li><a href="users.html" class="left">EPIC MAIL</a></li>
-          <li><a href="#" class="right">(<span style="color: lightblue;"><script>document.writeln(localStorage.getItem('profile'));</script></span>)</a></li>
+          <li><a href="#" class="right">(<span style="color: #86b5b5;"><script>document.writeln(localStorage.getItem('profile'));</script></span>)</a></li>
           <li><a href='#' class="right" onclick="logOut()">Logout</a></li>
           <li><a href="users.html" class="right">Users</a></li>
-          <li><a href="admin.html" class="right">Admin</a></li>
+          <li><a href="admin.html" class="right" style="background-color: aliceblue; color:black">Admin</a></li>
         </ul>
       </nav>
       <div class="maincontainer">
@@ -95,9 +95,6 @@
            
               <h1>Change Group Name</h1>
               <hr>
-              <div id="messages"></div>
-              <select id="Group options">
-              </select>
               <br>
               <div id="add_user_form">
               <select id="getgroupId">
@@ -117,9 +114,7 @@
            
             <h1>Delete Group</h1>
             <hr>
-            <div id="messages"></div>
-            <select id="Group options">
-            </select>
+            
             <br>
             <div id="delete_user_form">
             <select id="DeleteGroupId">

@@ -45,7 +45,7 @@ function clickOutside(e){
 // Get the modal
 var modal = document.getElementById('DisplayMessage');
 
-// Get the button that opens the modal
+// Get the button thindexat opens the modal
 var modalBtn  = document.getElementById("message2");
 
 // Get the <span> element that closes the modal
@@ -90,7 +90,6 @@ function clickOutside(e){
   
 function readMessage(id, message, subject, email){
    openModal();
-
    document.getElementById("sender_email").innerHTML =email
    document.getElementById("received_message").innerHTML =message
    document.getElementById("subject").innerHTML =subject

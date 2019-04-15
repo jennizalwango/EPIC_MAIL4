@@ -30,15 +30,16 @@ function loginUser(){
                 }
             }
             else{
-                let mssg = document.getElementById('message');
-                // mssg.style.display="block";
-                // mssg.innerHTML = "Missing or wrong email format or password is less than five characters"
-                // setInterval(function(){
-                //     mssg.style.display="none"
-                    alert("Missing or wrong email format or password is less than five characters");
+                var mssg = document.getElementById('error-message');
+                mssg.style.display="block";
+                mssg.innerHTML = ""+JSON.stringify(result);
+                setInterval(function(){
+                    mssg.style.display="none" 
+                },5000);
 
                 
             }
+                
             
         })
         

@@ -1,7 +1,7 @@
 
 token = localStorage.getItem('auth-token');
 if (token == null){
-  window.location.href= './index.html'
+  window.location.href= './login.html'
 }
 let getmessage_url= SERVER_URL+"/api/v2/messages/sent";
 fetch(getmessage_url,{
